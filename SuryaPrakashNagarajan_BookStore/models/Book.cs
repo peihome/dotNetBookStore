@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace SuryaPrakashNagarajan_BookStore.model
+namespace SuryaPrakashNagarajan_BookStore.models
 {
     public class Book
     {

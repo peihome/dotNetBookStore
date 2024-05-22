@@ -1,9 +1,12 @@
-﻿namespace SuryaPrakashNagarajan_BookStore.model
+﻿using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+
+namespace SuryaPrakashNagarajan_BookStore.models
 {
-    public class Genre : DbContext
+    public class Books : DbContext
     {
-        public Genres()
-            : base("name=Genres")
+        public Books()
+            : base("name=Books")
         {
         }
 
@@ -13,5 +16,6 @@
         }
 
         public virtual DbSet<Book> Book { get; set; }
+    
     }
 }

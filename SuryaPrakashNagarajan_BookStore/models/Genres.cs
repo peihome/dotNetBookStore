@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace SuryaPrakashNagarajan_BookStore.model
+namespace SuryaPrakashNagarajan_BookStore.models
 {
     public class Genres : DbContext
     {
