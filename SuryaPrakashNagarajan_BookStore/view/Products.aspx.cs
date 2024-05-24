@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json.Linq;
+using SuryaPrakashNagarajan_BookStore.controller;
+using SuryaPrakashNagarajan_BookStore.model;
 
 namespace SuryaPrakashNagarajan_BookStore.view
 {
@@ -24,10 +26,15 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         private void PopulateProductsList()
         {
-            DropDownList1.Items.Add(new ListItem("Surya", "Surya"));
-            DropDownList1.Items.Add(new ListItem("Item 2", "Item 2"));
-            DropDownList1.Items.Add(new ListItem("Item 3", "Item 3"));
-            DropDownList1.Items.Add(new ListItem("Item 4", "Item 4"));
+
+            List<model.Book> allBooks = Product.GetAllBookNames();
+
+            DropDownList1.Items.Clear();
+
+            foreach (var book in allBooks)
+            {
+                DropDownList1.Items.Add(new ListItem(book.Name, book.Name));
+            }
 
         }
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuryaPrakashNagarajan_BookStore
+namespace SuryaPrakashNagarajan_BookStore.model
 {
     using System;
     using System.Data.Entity;
@@ -25,5 +25,7 @@ namespace SuryaPrakashNagarajan_BookStore
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<Genre> Genres { get; set; }
     }
 }
