@@ -152,6 +152,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="view\Cart.aspx" />
+    <Content Include="view\Checkout.aspx" />
     <Content Include="view\Products.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="view\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="view\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
