@@ -26,6 +26,7 @@ namespace SuryaPrakashNagarajan_BookStore.model
         }
     
         public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<Cart> Cart { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
     }
 }

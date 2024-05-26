@@ -5,9 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="65486f66f81048368faf06954cc74078" Name="Diagram1">
-        <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Book" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Genre" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Books_Genre" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Book" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Cart" Width="1.5" PointX="5.25" PointY="1.375" />
+        <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Genre" Width="1.5" PointX="0.75" PointY="1.375" />
+        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Books_Genre" />
+        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Books_tbl_Cart" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

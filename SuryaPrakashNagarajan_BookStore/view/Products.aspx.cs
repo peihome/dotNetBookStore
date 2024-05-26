@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json.Linq;
-using SuryaPrakashNagarajan_BookStore.controller;
-using SuryaPrakashNagarajan_BookStore.model;
 
 namespace SuryaPrakashNagarajan_BookStore.view
 {
@@ -16,60 +12,82 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition
+            {
+                Path = "~/Scripts/jquery.validate.unobtrusive.min.js",
+                DebugPath = "~/Scripts/jquery.validate.unobtrusive.min.js"
+            });
+
             if (!IsPostBack)
             {
                 PopulateProductsList();
             }
 
-            PopulateProductDetails();
         }
 
         private void PopulateProductsList()
         {
 
-            List<model.Book> allBooks = Product.GetAllBookNames();
+            //Populate Genre List
+            List<model.Genre> allGenres = controller.Book.GetAllGenres();
 
-            DropDownList1.Items.Clear();
+            GenreList.Items.Clear();
 
-            foreach (var book in allBooks)
+            GenreList.Items.Add(new ListItem("--select--", ""));
+
+            foreach (var genre in allGenres)
             {
-                DropDownList1.Items.Add(new ListItem(book.Name, book.Name));
+                GenreList.Items.Add(new ListItem(genre.Name, genre.Id+""));
             }
+
 
         }
 
-        private void PopulateProductDetails() => productsDictionary = new Dictionary<string, JObject>
-            {
-                { "Surya", JObject.Parse("{ 'title': 'Product 1', 'price': 10.99, 'description': 'Description of Product 1' }") },
-                { "Item 2", JObject.Parse("{ 'title': 'Product 2', 'price': 20.99, 'description': 'Description of Product 2' }") },
-                { "Item 3", JObject.Parse("{ 'title': 'Product 3', 'price': 30.99, 'description': 'Description of Product 3' }") },
-                { "Item 4", JObject.Parse("{ 'title': 'Product 4', 'price': 40.99, 'description': 'Description of Product 4' }") }
-            };
-
-        protected void ProductsList_RenderProductDetails(object sender, EventArgs e)
+        private void populateBooks(int genreId)
         {
-            // Get the selected item
-            string selectedItem = DropDownList1.SelectedItem.Text;
-            string selectedValue = DropDownList1.SelectedValue;
+            //Populate Book List
+            List<model.Book> allBooks = controller.Book.GetAllBooks(genreId);
 
-            if (productsDictionary.TryGetValue(selectedValue, out JObject book))
+            BookList.Items.Clear();
+
+            BookList.Items.Add(new ListItem("--select--", ""));
+
+            foreach (var book in allBooks)
             {
-                title.Text = book["title"].ToString();
-                description.Text = book["description"].ToString();
-                price.Text = book["price"].ToString();
+                BookList.Items.Add(new ListItem(book.Name, book.Id + ""));
             }
+        }
+
+        protected void RenderBookList(object sender, EventArgs e)
+        {
+            populateBooks(int.Parse(GenreList.SelectedValue));
+        }
+
+        protected void HandleBookSelection(object sender, EventArgs e)
+        {
+            populateBookDetails(int.Parse(BookList.SelectedValue));
+        }
+
+        protected void populateBookDetails(int bookId)
+        {
+            model.Book book = controller.Book.getBookData(bookId);
+            Title.Text = book.Name;
+            Description.Text = book.Description;
+            Price.Text = "$ " +book.Price;
+            BookCover.ImageUrl = book.ImagePath;
         }
 
         protected void addToCartButton(object sender, EventArgs e)
         {
-            // Action to perform when Button 1 is clicked
-            //Label1.Text = "Button 1 was clicked!";
+            if(Page.IsValid)
+            {
+                controller.Book.insertOrUpdateCartItem(int.Parse(BookList.SelectedValue), int.Parse(Quantity.Text));
+            }
         }
 
         protected void goToCartButton(object sender, EventArgs e)
         {
-            // Action to perform when Button 2 is clicked
-            //Label1.Text = "Button 2 was clicked!";
+            Response.Redirect("/view/Cart.aspx");
         }
     }
 }

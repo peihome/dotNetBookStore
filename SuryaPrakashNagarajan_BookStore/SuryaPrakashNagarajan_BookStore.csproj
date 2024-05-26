@@ -99,6 +99,40 @@
       <DependentUpon>suryaprakashnagarajan_bookstore.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="images\All_the_Light_We_Cannot_See.jpg" />
+    <Content Include="images\A_Game_of_Thrones.jpg" />
+    <Content Include="images\Becoming.jpg" />
+    <Content Include="images\Big_Little_Lies.jpeg" />
+    <Content Include="images\Dracula.jpeg" />
+    <Content Include="images\Dune.png" />
+    <Content Include="images\Educated.jpeg" />
+    <Content Include="images\Enders_Game.jpg" />
+    <Content Include="images\Foundation.jpeg" />
+    <Content Include="images\Frankenstein.jpeg" />
+    <Content Include="images\Gone_Girl.jpg" />
+    <Content Include="images\Harry_Potter_and_the_Sorcerers_Stone.jpg" />
+    <Content Include="images\In_the_Woods.jpeg" />
+    <Content Include="images\It.jpeg" />
+    <Content Include="images\Neuromancer.jpg" />
+    <Content Include="images\Sapiens.jpg" />
+    <Content Include="images\Shutter_Island.jpg" />
+    <Content Include="images\Snow_Crash.jpg" />
+    <Content Include="images\The_Book_Thief.jpg" />
+    <Content Include="images\The_Bourne_Identity.png" />
+    <Content Include="images\The_Da_Vinci_Code.jpg" />
+    <Content Include="images\The_Girl_on_the_Train.jpg" />
+    <Content Include="images\The_Girl_with_the_Dragon_Tattoo.jpg" />
+    <Content Include="images\The_Haunting_of_Hill_House.jpg" />
+    <Content Include="images\The_Help.jpeg" />
+    <Content Include="images\The_Hobbit.jpg" />
+    <Content Include="images\The_Immortal_Life_of_Henrietta_Lacks.jpg" />
+    <Content Include="images\The_Name_of_the_Wind.jpg" />
+    <Content Include="images\The_Nightingale.jpg" />
+    <Content Include="images\The_Pillars_of_the_Earth.jpg" />
+    <Content Include="images\The_Shining.jpeg" />
+    <Content Include="images\The_Silence_of_the_Lambs.jpg" />
+    <Content Include="images\The_Way_of_Kings.jpg" />
+    <Content Include="images\Unbroken.jpg" />
     <Content Include="model\suryaprakashnagarajan_bookstore.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>suryaprakashnagarajan_bookstore.edmx</DependentUpon>
@@ -109,6 +143,14 @@
       <DependentUpon>suryaprakashnagarajan_bookstore.edmx</DependentUpon>
       <LastGenOutput>suryaprakashnagarajan_bookstore.cs</LastGenOutput>
     </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="view\Cart.aspx" />
     <Content Include="view\Products.aspx" />
     <Content Include="Web.config" />
@@ -122,8 +164,10 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="controller\Product.cs" />
     <Compile Include="model\Book.cs">
+      <DependentUpon>suryaprakashnagarajan_bookstore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Cart.cs">
       <DependentUpon>suryaprakashnagarajan_bookstore.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Genre.cs">

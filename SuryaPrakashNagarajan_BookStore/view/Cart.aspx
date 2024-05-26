@@ -10,11 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>Your shopping cart</h1>
-            <asp:ListBox ID="ListBox1" runat="server" SelectionMode="Multiple">
-                <asp:ListItem Value="1">Product 1</asp:ListItem>
-                <asp:ListItem Value="2">Product 2</asp:ListItem>
-                <asp:ListItem Value="3">Product 3</asp:ListItem>
-                <asp:ListItem Value="4">Product 4</asp:ListItem>
+            <asp:ListBox ID="CartList" runat="server" SelectionMode="Multiple">
             </asp:ListBox>
 
             <asp:Button ID="RemoveItem" runat="server" Text="Remove item" OnClick="RemoveItem_Click" />
