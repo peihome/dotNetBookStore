@@ -154,6 +154,7 @@
     <Content Include="view\Cart.aspx" />
     <Content Include="view\Checkout.aspx" />
     <Content Include="view\Products.aspx" />
+    <Content Include="view\Success.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +211,13 @@
     </Compile>
     <Compile Include="view\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

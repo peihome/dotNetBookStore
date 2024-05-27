@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Newtonsoft.Json.Linq;
 
 namespace SuryaPrakashNagarajan_BookStore.view
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Products : System.Web.UI.Page
     {
-        private Dictionary<string, JObject> productsDictionary;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,6 +38,7 @@ namespace SuryaPrakashNagarajan_BookStore.view
                 GenreList.Items.Add(new ListItem(genre.Name, genre.Id+""));
             }
 
+            BookList.Items.Add(new ListItem("--select--",""));
 
         }
 

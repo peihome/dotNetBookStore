@@ -22,6 +22,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ValidationSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary;
+        
+        /// <summary>
         /// Email control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Email_Required;
+        
+        /// <summary>
+        /// Email_RE_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator Email_RE_Validator;
         
         /// <summary>
         /// ConfirmEmail control.
@@ -58,6 +76,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ConfirmEmail_Required;
         
         /// <summary>
+        /// ConfirmEmail_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator ConfirmEmail_Validator;
+        
+        /// <summary>
         /// FirstName control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstName_Required;
+        
+        /// <summary>
+        /// FirstName_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator FirstName_Validator;
         
         /// <summary>
         /// LastName control.
@@ -94,6 +130,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LastName_Required;
         
         /// <summary>
+        /// LastName_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator LastName_Validator;
+        
+        /// <summary>
         /// PhoneNumber control.
         /// </summary>
         /// <remarks>
@@ -110,6 +155,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneNumber_Required;
+        
+        /// <summary>
+        /// PhoneNumber_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PhoneNumber_Validator;
         
         /// <summary>
         /// Address control.
@@ -130,6 +184,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator Address_Required;
         
         /// <summary>
+        /// Address_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator Address_Validator;
+        
+        /// <summary>
         /// City control.
         /// </summary>
         /// <remarks>
@@ -146,6 +209,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator City_Required;
+        
+        /// <summary>
+        /// City_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator City_Validator;
         
         /// <summary>
         /// State control.
@@ -182,6 +254,15 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ZipCode_Required;
+        
+        /// <summary>
+        /// ZipCode_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ZipCode_Validator;
         
         /// <summary>
         /// Subscription control.
@@ -229,15 +310,6 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.WebControls.CheckBox LocalEvents;
         
         /// <summary>
-        /// Subscription_Required control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Subscription_Required;
-        
-        /// <summary>
         /// Twitter control.
         /// </summary>
         /// <remarks>
@@ -245,15 +317,6 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton Twitter;
-        
-        /// <summary>
-        /// Twitter_Required control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Twitter_Required;
         
         /// <summary>
         /// Facebook control.
@@ -265,15 +328,6 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.WebControls.RadioButton Facebook;
         
         /// <summary>
-        /// Facebook_Required control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Facebook_Required;
-        
-        /// <summary>
         /// TextMessage control.
         /// </summary>
         /// <remarks>
@@ -283,15 +337,6 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         protected global::System.Web.UI.WebControls.RadioButton TextMessage;
         
         /// <summary>
-        /// TextMessage_Required control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator TextMessage_Required;
-        
-        /// <summary>
         /// Email_Contact control.
         /// </summary>
         /// <remarks>
@@ -299,15 +344,6 @@ namespace SuryaPrakashNagarajan_BookStore.view {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton Email_Contact;
-        
-        /// <summary>
-        /// Email_Contact_Required control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator Email_Contact_Required;
         
         /// <summary>
         /// CheckOut control.

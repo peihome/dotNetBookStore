@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Products" %>
 
 <!DOCTYPE html>
 

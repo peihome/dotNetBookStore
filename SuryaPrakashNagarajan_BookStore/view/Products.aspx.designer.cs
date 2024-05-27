@@ -10,7 +10,7 @@
 namespace SuryaPrakashNagarajan_BookStore.view {
     
     
-    public partial class WebForm1 {
+    public partial class Products {
         
         /// <summary>
         /// form1 control.

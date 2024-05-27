@@ -28,7 +28,7 @@ namespace SuryaPrakashNagarajan_BookStore.view
             foreach (int bookId in bookIds)
             {
                 bookIdVsBook.TryGetValue(bookId, out book);
-                CartList.Items.Add(new ListItem(book.Name, book.Id + ""));
+                CartList.Items.Add(new ListItem(book.Name + "( " , book.Id + ""));
 
             }
 

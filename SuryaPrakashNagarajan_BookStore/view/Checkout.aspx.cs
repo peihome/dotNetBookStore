@@ -21,6 +21,7 @@ namespace SuryaPrakashNagarajan_BookStore.view
             {
                 PopulateStateList();
             }
+
         }
 
         protected void PopulateStateList()
@@ -43,12 +44,16 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void CheckOut_Click(object sender, EventArgs e)
         {
-
+            Page.Validate("form1");
+            if (Page.IsValid)
+            {
+                Response.Redirect("/view/Success.aspx");
+            }
         }
 
         protected void CancelOrder_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/view/Cart.aspx");
         }
     }
 }
