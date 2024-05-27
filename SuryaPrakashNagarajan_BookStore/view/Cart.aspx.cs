@@ -40,6 +40,14 @@ namespace SuryaPrakashNagarajan_BookStore.view
             if (CartList.Items.Count == 0)
             {
                 CartList.Items.Add(new ListItem(""));
+                CheckOut.Enabled = false;
+                EmptyCart.Enabled = false;
+                RemoveItem.Enabled = false;
+            }else
+            {
+                CheckOut.Enabled = true;
+                EmptyCart.Enabled = true;
+                RemoveItem.Enabled = true;
             }
 
 
