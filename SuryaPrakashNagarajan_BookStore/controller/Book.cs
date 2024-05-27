@@ -38,7 +38,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
                 try
                 {
                     return context.Cart.Single(item => item.Book_Id == bookId);
-                }catch(Exception e)
+                }catch(Exception)
                 {
                     return null;
                 }
@@ -114,22 +114,23 @@ namespace SuryaPrakashNagarajan_BookStore.controller
         {
             using (var context = new suryaprakashnagarajan_bookstoreEntities())
             {
-                var books = context.Books
+                var bookIdVsBookItem = context.Books
                     .Where(b => bookIds.Contains(b.Id))
                     .ToDictionary(b => b.Id);
 
-                return books;
+                return bookIdVsBookItem;
             }
         }
 
-        public static List<int> getBooksIdsFromCart()
+        public static Dictionary<int, model.Cart> getBooksIdsVSCartItemFromCart()
         {
             using (var context = new suryaprakashnagarajan_bookstoreEntities())
             {
-                var bookIds = context.Cart.Select(cartItem => cartItem.Book_Id).ToList();
+                var bookIdVsCartItem = context.Cart
+                    .ToDictionary(b => b.Book_Id);
 
-                return bookIds;
-       
+                return bookIdVsCartItem;
+
             }
         }
 

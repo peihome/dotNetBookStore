@@ -19,16 +19,21 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void PopulateCartList()
         {
-            List<int> bookIds = controller.Book.getBooksIdsFromCart();
+            Dictionary<int, model.Cart> bookIdVsCartItem = controller.Book.getBooksIdsVSCartItemFromCart();
+
+            List<int> bookIds = bookIdVsCartItem.Keys.ToList();
             Dictionary<int, model.Book> bookIdVsBook = controller.Book.GetBooksByIds(bookIds);
             model.Book book = null;
+            model.Cart cartItem = null;
 
             CartList.Items.Clear();
 
             foreach (int bookId in bookIds)
             {
                 bookIdVsBook.TryGetValue(bookId, out book);
-                CartList.Items.Add(new ListItem(book.Name + "( " , book.Id + ""));
+                bookIdVsCartItem.TryGetValue(bookId, out cartItem);
+
+                CartList.Items.Add(new ListItem(book.Name + " (" + cartItem.Quantity + " at " + (cartItem.Quantity * book.Price) +")", book.Id + ""));
 
             }
 
