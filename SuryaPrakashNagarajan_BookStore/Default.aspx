@@ -11,12 +11,12 @@
     <h1>Home Page</h1>
     <form id="form1" runat="server" class="form">
         <div>
-            <h3>Choose an option :</h3>
+            <h2>Choose an option :</h2>
             <nav>
                 <ul class="navContainer">
-                    <li><a href="Default.aspx">Home</a></li>
-                    <li><a href="view/Products.aspx">Products</a></li>
-                    <li><a href="view/Cart.aspx">Cart</a></li>
+                    <li><a class="continueShopping" href="Default.aspx">Home</a></li>
+                    <li><a class="continueShopping" href="view/Products.aspx">Products</a></li>
+                    <li><a class="continueShopping" href="view/Cart.aspx">Cart</a></li>
                 </ul>
             </nav>
         </div>
