@@ -4,15 +4,17 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Products Page</title>
+    <link rel="stylesheet" href="../Content/style.css" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <h1>Products Page</h1>
+    <form id="form1" runat="server" class = "form">
         <div>
-            <div>
-                <span>Please select a genre:</span>
-                <asp:DropDownList ID="GenreList" AutoPostBack="true" runat="server" OnSelectedIndexChanged="RenderBookList">
+            <div class="input-container ic2">
+                <asp:DropDownList CssClass="input" ID="GenreList" AutoPostBack="true" runat="server" OnSelectedIndexChanged="RenderBookList">
                 </asp:DropDownList>
+                <label for="GenreList" class="placeholder">Please select a genre:</label>
                 <asp:RequiredFieldValidator id="GenreListValidator"
                     ControlToValidate="GenreList"
                     Display="Dynamic"
@@ -21,10 +23,10 @@
                     ForeColor="Red" /> 
             </div>
 
-            <div>
-                <span>Please select a product:</span>
-                <asp:DropDownList ID="BookList" AutoPostBack="true" runat="server" OnSelectedIndexChanged="HandleBookSelection">
+            <div class="input-container ic2">
+                <asp:DropDownList CssClass="input" ID="BookList" AutoPostBack="true" runat="server" OnSelectedIndexChanged="HandleBookSelection">
                 </asp:DropDownList>
+                <label for="BookList" class="placeholder">Please select a product:</label>
                 <asp:RequiredFieldValidator id="BookListValidator"
                     ControlToValidate="BookList"
                     Display="Dynamic"
@@ -33,19 +35,19 @@
                     ForeColor="Red" />
             </div>
 
-            <div>
+            <div class="subtitle">
                 <h3><asp:Label ID="Title" runat="server" Text=""></asp:Label></h3>
                 <p><asp:Label ID="Description" runat="server" Text=""></asp:Label></p>
                 <p><asp:Label ID="Price" runat="server" Text=""></asp:Label></p>
             </div>
 
-            <div>
+            <div class="tAC">
                 <asp:Image ID="BookCover" runat="server" />
             </div>
 
-            <div>
-                <span>Quantity:</span>
-                <asp:TextBox ID="Quantity" TextMode="Number" runat="server"></asp:TextBox>
+            <div class="input-container ic2">
+                <asp:TextBox CssClass="input" ID="Quantity" TextMode="Number" runat="server"></asp:TextBox>
+                <label for="Quantity" class="placeholder">Quantity:</label>
                 <asp:RequiredFieldValidator id="quantityValidator"
                     ControlToValidate="Quantity"
                     Display="Dynamic"
@@ -64,8 +66,8 @@
                     />
             </div>
             <div>
-                <asp:Button ID="addToCart" runat="server" Text="Add to Cart" OnClick="addToCartButton" />
-                <asp:Button ID="goToCart" runat="server" Text="Go to Cart" OnClick="goToCartButton" />
+                <asp:Button CssClass="submit" ID="addToCart" runat="server" Text="Add to Cart" OnClick="addToCartButton" />
+                <asp:Button CssClass="submit" ID="goToCart" runat="server" Text="Go to Cart" OnClick="goToCartButton" />
             </div>
         </div>
     </form>

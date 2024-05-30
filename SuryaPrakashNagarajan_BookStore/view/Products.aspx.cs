@@ -59,12 +59,43 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void RenderBookList(object sender, EventArgs e)
         {
-            populateBooks(int.Parse(GenreList.SelectedValue));
+            if (GenreList.SelectedValue != "")
+            {
+                populateBooks(int.Parse(GenreList.SelectedValue));
+            }else
+            {
+                resetBookList();
+                removeBookSelection();
+            }
+            
+        }
+
+        protected void resetBookList()
+        {
+            BookList.Items.Clear();
+            BookList.Items.Add(new ListItem("--select--", ""));
         }
 
         protected void HandleBookSelection(object sender, EventArgs e)
         {
-            populateBookDetails(int.Parse(BookList.SelectedValue));
+            dynamic bookId = BookList.SelectedValue;
+
+            if (bookId != "")
+            {
+                populateBookDetails(int.Parse(bookId));
+            }else
+            {
+                removeBookSelection();
+            }
+            
+        }
+
+        protected void removeBookSelection()
+        {
+            Title.Text = "";
+            Description.Text = "";
+            Price.Text = "";
+            BookCover.ImageUrl = "";
         }
 
         protected void populateBookDetails(int bookId)

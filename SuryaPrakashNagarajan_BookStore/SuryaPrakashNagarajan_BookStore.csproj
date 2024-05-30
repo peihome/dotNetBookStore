@@ -117,6 +117,7 @@
     <Content Include="images\Sapiens.jpg" />
     <Content Include="images\Shutter_Island.jpg" />
     <Content Include="images\Snow_Crash.jpg" />
+    <Content Include="images\studyroom.gif" />
     <Content Include="images\The_Book_Thief.jpg" />
     <Content Include="images\The_Bourne_Identity.png" />
     <Content Include="images\The_Da_Vinci_Code.jpg" />
@@ -151,6 +152,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\style.css" />
     <Content Include="view\Cart.aspx" />
     <Content Include="view\Checkout.aspx" />
     <Content Include="view\Products.aspx" />
