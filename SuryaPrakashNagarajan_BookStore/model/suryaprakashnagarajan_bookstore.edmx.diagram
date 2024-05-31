@@ -8,8 +8,8 @@
         <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Book" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Cart" Width="1.5" PointX="5.25" PointY="1.375" />
         <EntityTypeShape EntityType="suryaprakashnagarajan_bookstoreModel.Genre" Width="1.5" PointX="0.75" PointY="1.375" />
-        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Books_Genre" />
-        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Books_tbl_Cart" />
+        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Books_Genres" />
+        <AssociationConnector Association="suryaprakashnagarajan_bookstoreModel.FK_Cart_Books" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
