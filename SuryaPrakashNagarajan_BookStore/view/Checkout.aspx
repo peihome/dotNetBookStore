@@ -35,14 +35,14 @@
                 <asp:TextBox CssClass="input" ID="FirstName" runat="server" TextMode="SingleLine" />
                 <label for="FirstName" class="placeholder">First name</label>
                 <asp:RequiredFieldValidator ValidationGroup="form1" ID="FirstName_Required" runat="server" ControlToValidate="FirstName" ErrorMessage="FirstName field cannot be empty." Display="Dynamic" ForeColor="Red" />
-                <asp:RegularExpressionValidator ValidationGroup="form1" ID="FirstName_Validator" runat="server" ControlToValidate="FirstName" ErrorMessage="Please enter a valid FirstName." ValidationExpression="^[a-z ,.'-]+$" Display="Dynamic" ForeColor="Red" />
+                <asp:RegularExpressionValidator ValidationGroup="form1" ID="FirstName_Validator" runat="server" ControlToValidate="FirstName" ErrorMessage="Please enter a valid FirstName." ValidationExpression="^[a-zA-Z ,.'-]+$" Display="Dynamic" ForeColor="Red" />
             </div>
 
             <div class="input-container ic2">
                 <asp:TextBox CssClass="input" ID="LastName" runat="server" TextMode="SingleLine" />
                 <label for="LastName" class="placeholder">Last name</label>
                 <asp:RequiredFieldValidator ValidationGroup="form1" ID="LastName_Required" runat="server" ControlToValidate="LastName" ErrorMessage="LastName field cannot be empty." Display="Dynamic" ForeColor="Red" />
-                <asp:RegularExpressionValidator ValidationGroup="form1" ID="LastName_Validator" runat="server" ControlToValidate="LastName" ErrorMessage="Please enter a valid LastName." ValidationExpression="^[a-z ,.'-]+$" Display="Dynamic" ForeColor="Red" />
+                <asp:RegularExpressionValidator ValidationGroup="form1" ID="LastName_Validator" runat="server" ControlToValidate="LastName" ErrorMessage="Please enter a valid LastName." ValidationExpression="^[a-zA-Z ,.'-]+$" Display="Dynamic" ForeColor="Red" />
             </div>
 
             <div class="input-container ic2">
