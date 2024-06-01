@@ -16,6 +16,14 @@ h1, h3, h2, h4 {
     padding: 5px;
 }
 
+#ValidationSummary ul{
+    display: grid;
+}
+
+#ValidationSummary ul li:before {
+    content: "■ ";
+}
+
 .heightFit {
     height: fit-content;
 }

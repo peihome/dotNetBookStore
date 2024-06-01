@@ -18,9 +18,8 @@
         </EntityType>
         <EntityType Name="Cart">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="Book_Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Book_Id" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
@@ -45,7 +44,7 @@
         </Association>
         <Association Name="FK_Cart_Books">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
-          <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+          <End Role="Cart" Type="Self.Cart" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Books">
               <PropertyRef Name="Id" />
@@ -96,13 +95,12 @@
           <Property Name="Genre_Id" Type="Int32" Nullable="false" />
           <Property Name="ImagePath" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Genre" Relationship="suryaprakashnagarajan_bookstoreModel.FK_Books_Genres" FromRole="Book" ToRole="Genre" />
-          <NavigationProperty Name="Carts" Relationship="suryaprakashnagarajan_bookstoreModel.FK_Cart_Books" FromRole="Book" ToRole="Cart" />
+          <NavigationProperty Name="Cart" Relationship="suryaprakashnagarajan_bookstoreModel.FK_Cart_Books" FromRole="Book" ToRole="Cart" />
         </EntityType>
         <EntityType Name="Cart">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="Book_Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Book_Id" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Book" Relationship="suryaprakashnagarajan_bookstoreModel.FK_Cart_Books" FromRole="Cart" ToRole="Book" />
@@ -129,7 +127,7 @@
         </Association>
         <Association Name="FK_Cart_Books">
           <End Type="suryaprakashnagarajan_bookstoreModel.Book" Role="Book" Multiplicity="1" />
-          <End Type="suryaprakashnagarajan_bookstoreModel.Cart" Role="Cart" Multiplicity="*" />
+          <End Type="suryaprakashnagarajan_bookstoreModel.Cart" Role="Cart" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Book">
               <PropertyRef Name="Id" />
@@ -162,7 +160,6 @@
               <MappingFragment StoreEntitySet="Cart">
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Book_Id" ColumnName="Book_Id" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

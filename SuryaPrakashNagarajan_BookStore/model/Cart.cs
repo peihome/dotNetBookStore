@@ -14,7 +14,6 @@ namespace SuryaPrakashNagarajan_BookStore.model
     
     public partial class Cart
     {
-        public int Id { get; set; }
         public int Book_Id { get; set; }
         public int Quantity { get; set; }
     
