@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//Cart page handling driver Class
+//Contains code for manupulating the cart activities like remove item / multiple items, empty cart
 namespace SuryaPrakashNagarajan_BookStore.view
 {
     public partial class Cart : System.Web.UI.Page

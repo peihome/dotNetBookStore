@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//This class contains code for the checkout page.
+//Most validations are done via Regex
+//Added jquery library for the backend to communicate with the frontend.
 namespace SuryaPrakashNagarajan_BookStore.view
 {
     public partial class Checkout : System.Web.UI.Page

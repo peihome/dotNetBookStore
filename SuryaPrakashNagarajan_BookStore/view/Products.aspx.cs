@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//Code for managing all products goes here
+//The product is displayed based on the Genre selection
 namespace SuryaPrakashNagarajan_BookStore.view
 {
     public partial class Products : System.Web.UI.Page

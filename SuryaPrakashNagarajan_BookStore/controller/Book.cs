@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using SuryaPrakashNagarajan_BookStore.model;
 
+//This file contains code that is used by other classes for CRUD operations.
+//The method name is self explanatory.
 namespace SuryaPrakashNagarajan_BookStore.controller
 {
     public class Book
