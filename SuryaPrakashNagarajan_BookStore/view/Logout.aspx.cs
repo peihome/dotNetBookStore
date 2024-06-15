@@ -4,19 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SuryaPrakashNagarajan_BookStore.view;
 
-//A simple success page with provision to remove all the cart items.
 namespace SuryaPrakashNagarajan_BookStore.view
 {
-    public partial class Success : System.Web.UI.Page
+    public partial class Logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                controller.Book.removeAllCartItems();
-            }
+            Session.Remove("FirstName");
+            Session.Remove("LastName");
+
+            Response.Redirect("/Login");
         }
     }
 }

@@ -1,13 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Cart" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/view/Master.Master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Cart" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
     <title>Cart Page</title>
-    <link rel="stylesheet" href="../Content/style.css" />
-</head>
-<body>
+</asp:Content>
+
+
+<asp:Content ID="bodyContent" ContentPlaceHolderID="bodyContent" runat="server">
     <h1>Cart Page</h1>
     <form id="form1" runat="server" class="form cartForm">
         <div>
@@ -30,5 +28,4 @@
             </div>
         </div>
     </form>
-</body>
-</html>
+</asp:Content>

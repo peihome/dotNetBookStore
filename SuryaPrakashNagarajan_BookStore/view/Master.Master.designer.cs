@@ -11,61 +11,43 @@ namespace SuryaPrakashNagarajan_BookStore.view
 {
 
 
-    public partial class Cart
+    public partial class Master
     {
 
         /// <summary>
-        /// form1 control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder title;
 
         /// <summary>
-        /// CartList control.
+        /// NavBarDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox CartList;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NavBarDiv;
 
         /// <summary>
-        /// RemoveItem control.
+        /// WelcomeText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RemoveItem;
+        protected global::System.Web.UI.WebControls.Label WelcomeText;
 
         /// <summary>
-        /// EmptyCart control.
+        /// bodyContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EmptyCart;
-
-        /// <summary>
-        /// ContinueShopping control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ContinueShopping;
-
-        /// <summary>
-        /// CheckOut control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckOut;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder bodyContent;
     }
 }

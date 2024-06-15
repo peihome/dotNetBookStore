@@ -1,13 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Checkout" %>
+﻿<%@ Page MasterPageFile="~/view/Master.Master" Language="C#" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Checkout" %>
 
-<!DOCTYPE html>
+<asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
+    <title>Checkout Page</title>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Checkout page</title>
-    <link rel="stylesheet" href="../Content/style.css" />
-</head>
-<body>
+<asp:Content ID="bodyContent" ContentPlaceHolderID="bodyContent" runat="server">
     <h1>Checkout Page</h1>
     <form id="form1" runat="server" class="form">
         <div>
@@ -113,9 +110,8 @@
             <div>
                 <asp:Button CssClass="submit" ValidationGroup="form1" ID="CheckOut" runat="server" Text="Check Out" OnClick="CheckOut_Click" />
                 <asp:Button CssClass="submit" ValidationGroup="form1" ID="CancelOrder" runat="server" Text="Cancel Order" OnClick="CancelOrder_Click" />
-                <asp:HyperLink CssClass="continueShopping" ID="ContinueShopping" runat="server" NavigateUrl="/view/Products.aspx" Text="Continue Shopping" />
+                <asp:HyperLink CssClass="continueShopping" ID="ContinueShopping" runat="server" NavigateUrl="/Products" Text="Continue Shopping" />
             </div>
         </div>
     </form>
-</body>
-</html>
+</asp:Content>

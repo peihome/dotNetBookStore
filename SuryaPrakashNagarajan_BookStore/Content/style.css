@@ -123,6 +123,11 @@ button {
     box-sizing: border-box;
     padding: 20px;
     width: 500px;
+    margin-top: 2em;
+}
+
+body {
+    margin-top: 6em !important;
 }
 
 .title {
@@ -289,4 +294,37 @@ li a {
 
 .tAC {
     text-align: center;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    gap: 1em;
+}
+
+.navbar li a {
+    background-color: unset;
+}
+
+.logout {
+    margin-top: unset;
+    width: 5em;
+    color: #eee !important;
+    align-content: center;
+}
+
+h1, h2, h3, h4, label{
+    color: #eee !important;
+}
+
+label {
+    font-size: 0.9rem;
+    padding-left: 3px;
+    padding-right: 5px;
+}
+
+.nav-link {
+    color: #eee !important;
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SuryaPrakashNagarajan_BookStore.view;
 
 //Cart page handling driver Class
 //Contains code for manupulating the cart activities like remove item / multiple items, empty cart
@@ -77,12 +78,12 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void ContinueShopping_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/view/Products.aspx");
+            Response.Redirect("/Products");
         }
 
         protected void CheckOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/view/Checkout.aspx");
+            Response.Redirect("/Checkout");
         }
     }
 }

@@ -1,14 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Products" %>
+﻿<%@ Page MasterPageFile="~/view/Master.Master" Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="SuryaPrakashNagarajan_BookStore.view.Products" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    <title>Product Page</title>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Products Page</title>
-    <link rel="stylesheet" href="../Content/style.css" />
-</head>
-<body>
-    <h1>Products Page</h1>
+<asp:Content ID="bodyContent" ContentPlaceHolderID="bodyContent" runat="server">
+    <h1>Product Page</h1>
     <form id="form1" runat="server" class = "form">
         <div>
             <div class="input-container ic2">
@@ -71,5 +68,4 @@
             </div>
         </div>
     </form>
-</body>
-</html>
+</asp:Content>

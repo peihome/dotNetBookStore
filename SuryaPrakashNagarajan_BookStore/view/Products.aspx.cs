@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SuryaPrakashNagarajan_BookStore.view;
 
 //Code for managing all products goes here
 //The product is displayed based on the Genre selection
@@ -12,11 +13,6 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition
-            {
-                Path = "~/Scripts/jquery.validate.unobtrusive.min.js",
-                DebugPath = "~/Scripts/jquery.validate.unobtrusive.min.js"
-            });
 
             if (!IsPostBack)
             {
@@ -119,7 +115,7 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
         protected void goToCartButton(object sender, EventArgs e)
         {
-            Response.Redirect("/view/Cart.aspx");
+            Response.Redirect("/Cart");
         }
     }
 }

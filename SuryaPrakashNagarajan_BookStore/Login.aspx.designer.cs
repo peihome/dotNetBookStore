@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuryaPrakashNagarajan_BookStore.view
+namespace SuryaPrakashNagarajan_BookStore
 {
 
 
-    public partial class Cart
+    public partial class Login
     {
 
         /// <summary>
@@ -24,48 +24,66 @@ namespace SuryaPrakashNagarajan_BookStore.view
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// CartList control.
+        /// FirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox CartList;
+        protected global::System.Web.UI.WebControls.TextBox FirstName;
 
         /// <summary>
-        /// RemoveItem control.
+        /// FirstName_Required control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RemoveItem;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstName_Required;
 
         /// <summary>
-        /// EmptyCart control.
+        /// FirstName_RE_Validator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EmptyCart;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator FirstName_RE_Validator;
 
         /// <summary>
-        /// ContinueShopping control.
+        /// LastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ContinueShopping;
+        protected global::System.Web.UI.WebControls.TextBox LastName;
 
         /// <summary>
-        /// CheckOut control.
+        /// LastName_Required control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckOut;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LastName_Required;
+
+        /// <summary>
+        /// LastName_RE_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator LastName_RE_Validator;
+
+        /// <summary>
+        /// Submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit;
     }
 }

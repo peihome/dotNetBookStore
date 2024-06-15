@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SuryaPrakashNagarajan_BookStore.view;
 
 //This class contains code for the checkout page.
 //Most validations are done via Regex
@@ -14,12 +15,6 @@ namespace SuryaPrakashNagarajan_BookStore.view
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition
-            {
-                Path = "~/Scripts/jquery.validate.unobtrusive.min.js",
-                DebugPath = "~/Scripts/jquery.validate.unobtrusive.min.js"
-            });
-
             if (!IsPostBack)
             {
                 PopulateStateList();
@@ -50,13 +45,13 @@ namespace SuryaPrakashNagarajan_BookStore.view
             Page.Validate("form1");
             if (Page.IsValid)
             {
-                Response.Redirect("/view/Success.aspx");
+                Response.Redirect("/Success");
             }
         }
 
         protected void CancelOrder_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/view/Cart.aspx");
+            Response.Redirect("/Cart");
         }
     }
 }

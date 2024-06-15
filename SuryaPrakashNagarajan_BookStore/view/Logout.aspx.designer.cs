@@ -7,11 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuryaPrakashNagarajan_BookStore
+
+namespace SuryaPrakashNagarajan_BookStore.view
 {
-
-
-    public partial class Default
+    public partial class Logout
     {
 
         /// <summary>
