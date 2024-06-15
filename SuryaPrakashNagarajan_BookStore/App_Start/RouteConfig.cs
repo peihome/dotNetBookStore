@@ -13,7 +13,8 @@ namespace SuryaPrakashNagarajan_BookStore
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
-
+            
+            routes.MapPageRoute("Login", "", "~/Login.aspx");
             routes.MapPageRoute("Products", "Products", "~/view/Products.aspx");
             routes.MapPageRoute("Cart", "Cart", "~/view/Cart.aspx");
             routes.MapPageRoute("Checkout", "Checkout", "~/view/Checkout.aspx");
