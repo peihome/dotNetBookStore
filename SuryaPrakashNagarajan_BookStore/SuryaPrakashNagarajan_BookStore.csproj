@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SuryaPrakashNagarajan_BookStore</RootNamespace>
     <AssemblyName>SuryaPrakashNagarajan_BookStore</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -147,15 +148,22 @@
     <Content Include="images\The_Way_of_Kings.jpg" />
     <Content Include="images\Unbroken.jpg" />
     <Content Include="Login.aspx" />
-    <Content Include="model\suryaprakashnagarajan_bookstore.Context.tt">
+    <Content Include="model\bookstore_local_db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>suryaprakashnagarajan_bookstore.edmx</DependentUpon>
-      <LastGenOutput>suryaprakashnagarajan_bookstore.Context.cs</LastGenOutput>
+      <DependentUpon>bookstore_local_db.edmx</DependentUpon>
+      <LastGenOutput>bookstore_local_db.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="model\suryaprakashnagarajan_bookstore.tt">
+    <Content Include="model\bookstore_local_db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>suryaprakashnagarajan_bookstore.edmx</DependentUpon>
-      <LastGenOutput>suryaprakashnagarajan_bookstore.cs</LastGenOutput>
+      <DependentUpon>bookstore_local_db.edmx</DependentUpon>
+      <LastGenOutput>bookstore_local_db.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="model\bookstore_local_db.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>bookstore_local_db.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="model\bookstore_local_db.edmx.diagram">
+      <DependentUpon>bookstore_local_db.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\bookstoresurya - Web Deploy.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -189,28 +197,28 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="model\Book.cs">
-      <DependentUpon>suryaprakashnagarajan_bookstore.tt</DependentUpon>
+      <DependentUpon>bookstore_local_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\bookstore_local_db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookstore_local_db.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\bookstore_local_db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookstore_local_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\bookstore_local_db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bookstore_local_db.edmx</DependentUpon>
     </Compile>
     <Compile Include="model\Cart.cs">
-      <DependentUpon>suryaprakashnagarajan_bookstore.tt</DependentUpon>
+      <DependentUpon>bookstore_local_db.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Genre.cs">
-      <DependentUpon>suryaprakashnagarajan_bookstore.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\suryaprakashnagarajan_bookstore.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>suryaprakashnagarajan_bookstore.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\suryaprakashnagarajan_bookstore.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>suryaprakashnagarajan_bookstore.tt</DependentUpon>
-    </Compile>
-    <Compile Include="model\suryaprakashnagarajan_bookstore.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>suryaprakashnagarajan_bookstore.edmx</DependentUpon>
+      <DependentUpon>bookstore_local_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Mobile.Master.cs">
@@ -272,13 +280,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="libman.json" />
-    <EntityDeploy Include="model\suryaprakashnagarajan_bookstore.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>suryaprakashnagarajan_bookstore.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="model\suryaprakashnagarajan_bookstore.edmx.diagram">
-      <DependentUpon>suryaprakashnagarajan_bookstore.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="view\Master.Master" />
     <Content Include="Site.Mobile.Master" />
