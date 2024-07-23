@@ -17,8 +17,8 @@ namespace SuryaPrakashNagarajan_BookStore.model
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public double Price { get; set; }
-        public int Genre_Id { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<int> Genre_Id { get; set; }
         public string ImagePath { get; set; }
     
         public virtual Genre Genre { get; set; }

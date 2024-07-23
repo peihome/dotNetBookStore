@@ -176,6 +176,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Content\style.css" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="view\Admin.aspx" />
     <Content Include="view\Cart.aspx" />
     <Content Include="view\Checkout.aspx" />
     <Content Include="view\Logout.aspx" />
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="view\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="view\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>

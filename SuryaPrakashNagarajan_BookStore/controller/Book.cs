@@ -11,15 +11,15 @@ namespace SuryaPrakashNagarajan_BookStore.controller
     {
         public static List<model.Book> GetAllBooks(int genreId)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
-                return context.Books.Where(book => book.Genre_Id.Equals(genreId)).ToList();
+                return context.Books.Where(book => book.Genre_Id == genreId).ToList();
             }
         }
 
         public static List<model.Genre> GetAllGenres()
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 return context.Genres.ToList();
             }
@@ -27,7 +27,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static model.Book getBookData(int bookId)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 return context.Books.Single(book => book.Id == bookId);
             }
@@ -35,7 +35,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static model.Cart getCartItemByBookId(int bookId)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 try
                 {
@@ -50,7 +50,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static List<model.Cart> getCartItems()
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 return context.Cart.ToList();
             }
@@ -58,7 +58,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static void addCartItem(int bookId, int quantity)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 var cartItem = new Cart
                 {
@@ -74,7 +74,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static void increaseQuantityByBookId(int bookId, int quantity)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 var cartItem = context.Cart.SingleOrDefault(item => item.Book_Id == bookId);
 
@@ -106,7 +106,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static void removeAllCartItems()
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 context.Database.ExecuteSqlCommand("TRUNCATE TABLE Cart");
             }
@@ -114,7 +114,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static Dictionary<int, model.Book> GetBooksByIds(List<int> bookIds)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 var bookIdVsBookItem = context.Books
                     .Where(b => bookIds.Contains(b.Id))
@@ -126,7 +126,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static Dictionary<int, model.Cart> getBooksIdsVSCartItemFromCart()
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 var bookIdVsCartItem = context.Cart
                     .ToDictionary(b => b.Book_Id);
@@ -138,7 +138,7 @@ namespace SuryaPrakashNagarajan_BookStore.controller
 
         public static void removeCartItemsByBookIds(List<int> bookIds)
         {
-            using (var context = new suryaprakashnagarajan_bookstoreEntities())
+            using (var context = new bookstore_local_dbEntities())
             {
                 
                 var cartItemsToRemove = context.Cart.Where(item => bookIds.Contains(item.Book_Id)).ToList();
