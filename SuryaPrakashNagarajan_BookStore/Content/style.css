@@ -328,3 +328,75 @@ label {
 .nav-link {
     color: #eee !important;
 }
+
+.adminForm {
+    width: 50%;
+    margin-bottom: 2em;
+}
+
+.adminForm table {
+    width: 100%;
+}
+
+.adminForm td table {
+    width: unset;
+}
+
+.adminForm table {
+    margin-top: 2em;
+}
+
+.placeHolderCustomClass {
+    color: white;
+    margin-top: -5px;
+}
+
+#bodyContent_GenresGridView tr:nth-last-child(2) {
+    display: none;
+}
+
+#bodyContent_GenresGridView tr:nth-last-child(1) {
+    background-color: unset;
+    border: none;
+}
+
+#bodyContent_GenresGridView tr:nth-last-child(1) td {
+    background-color: unset;
+    border: none;
+}
+
+#bodyContent_GenresGridView {
+    border: none;
+}
+
+.customInput span {
+    padding-left: 1em;
+    float: left;
+}
+
+#bodyContent_ErrorMessageLabel {
+    padding-left: 1em;
+}
+
+#bodyContent_BookDetailsView tr:nth-last-child(1) {
+    text-align: center;
+}
+
+#bodyContent_BookDetailsView tr:nth-last-child(1) td {
+    background-color: black;
+}
+
+#bodyContent_BookDetailsView tr:nth-last-child(1) td a {
+    padding-left: 1em;
+    padding-right: 1em;
+    color: white;
+}
+
+.secondary {
+    background-color: #5a6268;
+    margin-top: 1em;
+}
+
+#bodyContent_BooksGridView tr:nth-child(1), #bodyContent_BooksGridView td:nth-child(1), #bodyContent_GenresGridView tr:nth-child(1), #bodyContent_GenresGridView td:nth-child(1) {
+    text-align: center;
+}

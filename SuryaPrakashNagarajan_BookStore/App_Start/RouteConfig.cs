@@ -20,6 +20,7 @@ namespace SuryaPrakashNagarajan_BookStore
             routes.MapPageRoute("Checkout", "Checkout", "~/view/Checkout.aspx");
             routes.MapPageRoute("Success", "Success", "~/view/Success.aspx");
             routes.MapPageRoute("Logout", "Logout", "~/view/Logout.aspx");
+            routes.MapPageRoute("Admin", "Admin", "~/view/Admin.aspx");
         }
     }
 }

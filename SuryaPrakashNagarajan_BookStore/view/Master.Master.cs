@@ -26,7 +26,7 @@ namespace SuryaPrakashNagarajan_BookStore.view
 
                 if ((firstName == null || lastName == null) && !currentPage.Equals("Login", StringComparison.OrdinalIgnoreCase))
                 {
-                    Response.Redirect("/Login");
+                     Response.Redirect("/Login");
                 }
                 else if (firstName != null && lastName != null && currentPage.Equals("Login", StringComparison.OrdinalIgnoreCase))
                 {

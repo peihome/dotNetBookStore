@@ -18,6 +18,7 @@
                     <li class="nav-item"><a class="nav-link" href="Products">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="Cart">Cart</a></li>
                     <li class="nav-item"><a class="nav-link" href="Checkout">Checkout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Admin">Admin</a></li>
                 </ul>
           </div>
           <asp:Label ID="WelcomeText" CssClass="navbar-brand" runat="server" />
